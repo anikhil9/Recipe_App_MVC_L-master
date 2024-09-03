@@ -1,0 +1,33 @@
+.team-member {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    padding: 20px;
+    background-color: #f4f4f4;
+}
+
+.team-member img {
+    width: 250px;
+    height: 250px;
+    margin-right: 20px;
+    border: 3px solid #ccc;
+    box-shadow: 4px 4px 10px rgba(0,0,0,0.2);
+}
+
+.member-info h2 {
+    margin: 0 0 10px 0;
+    color: #333;
+}
+
+.member-info p {
+    margin: 0;
+    color: #666;
+}
+
+.AboutHeader h1 {
+    text-align: center;
+    padding: 20px;
+    background-color: #333;
+    color: #fff;
+    padding-top: 50px;
+}

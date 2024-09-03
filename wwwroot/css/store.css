@@ -1,0 +1,57 @@
+.search-container {
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+#storeTable {
+    width: 90%;
+    margin: 20px auto;
+    border-collapse: collapse;
+    background-color: rgba(255, 255, 255, 0.8); /* Light background for the table to enhance readability */
+}
+
+#storeTable th, #storeTable td {
+    border: 1px solid #ffffff; /* White borders for a subtle look */
+    padding: 12px 15px; /* Larger padding for a better layout */
+    text-align: left;
+    color: #2E3842; /* Dark text for contrast */
+}
+
+#storeTable th {
+    background-color: #505393; /* Darker header background */
+    color: #ffffff; /* White text for headers */
+    letter-spacing: 0.1em;
+}
+
+#page-wrapper {
+    background-image: url('../../images/BackG.jpg'); /* Ensure correct path */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    min-height: 100vh; /* Full viewport height */
+}
+
+#searchBar {
+    width: 80%; /* Wider search bar for better usability */
+    padding: 10px;
+    border-radius: 5px; /* Rounded corners */
+    border: 2px solid #505393; /* Border color similar to the header */
+    font-size: 16px; /* Larger font size */
+    color: black;
+}
+
+#searchBar::placeholder {
+    color: #666; /* Lighter text for placeholder */
+}
+
+#searchBar:focus {
+    border-color: #21b2a6; /* Highlight focus with a theme color */
+    outline: none; /* Remove default focus outline */
+}
+
+/* Hover effects for rows to improve interactivity */
+#storeTable tr:hover {
+    background-color: #f4f4f4; /* Light grey background on hover */
+    cursor: pointer;
+}

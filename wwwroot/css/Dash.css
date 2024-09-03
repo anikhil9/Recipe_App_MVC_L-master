@@ -1,0 +1,60 @@
+.align-right {
+    text-align: right;
+    padding-right: 20px;
+    color: #ffffff; /* Assuming a dark header based on main.css */
+}
+
+.form-section, .recipes-section {
+    margin: 20px;
+    padding: 20px;
+    background: white;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+input[type="text"], textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}
+
+button {
+    padding: 10px 20px;
+    background-color: #5CACEE;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #1E90FF;
+}
+
+.recipe-item {
+    background: #f0f0f0;
+    padding: 10px;
+    margin-bottom: 5px;
+    border: 1px solid #ddd;
+}
+
+.edit-btn, .delete-btn {
+    margin-left: 10px;
+    background: none;
+    border: none;
+    color: #FF6347;
+    cursor: pointer;
+}
+
+.button-style {
+    background: #4E4852; /* A dark greyish color */
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    margin: 10px 5px; /* Space between buttons */
+}
+
+    .button-style:hover {
+        background: #5A5560; /* Slightly lighter grey for hover effect */
+    }

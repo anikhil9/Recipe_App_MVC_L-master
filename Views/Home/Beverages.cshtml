@@ -1,0 +1,136 @@
+﻿@{
+    Layout = null;
+}
+
+<!DOCTYPE HTML>
+<html>
+<head>
+    <title>Flavors Unleashed: A Taste Odyssey</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=yes, maximum-scale=5" />
+    <link rel="stylesheet" href="~/css/main.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #2e3842; /* dark gray background */
+            color: #f4f4f4; /* light gray text */
+            margin: 0;
+            padding: 0;
+        }
+
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            padding: 20px;
+            background-color: #333; /* slightly lighter gray background for gallery */
+        }
+
+        .gallery-item {
+            border: 1px solid #444; /* slightly darker border */
+            background: #2e3842; /* dark gray background for items */
+            box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+            text-align: center;
+            cursor: pointer;
+        }
+
+            .gallery-item img {
+                width: 100%;
+                height: auto;
+            }
+
+            .gallery-item h2 {
+                padding: 10px;
+                background: #333; /* header background in items */
+                margin: 0;
+                color: #fff; /* white text for headers */
+            }
+
+            .gallery-item a {
+                display: block;
+                padding: 10px;
+                background: #1d242a; /* very dark gray for buttons */
+                color: #fff;
+                text-decoration: none;
+            }
+
+                .gallery-item a:hover {
+                    background: #4E5D6C; /* lighter gray for hover */
+                }
+
+        #detailsPopup {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.8);
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            display: none;
+        }
+
+        #closeButton {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            padding: 5px 10px;
+            background: #333;
+            color: white;
+            cursor: pointer;
+        }
+
+        #popupImg {
+            max-width: 80%;
+            max-height: 80%;
+        }
+    </style>
+    <script>
+        function showImage(imageSrc) {
+            var popup = document.getElementById('detailsPopup');
+            var img = document.getElementById('popupImg');
+            img.src = imageSrc;
+            popup.style.display = 'flex';
+        }
+
+        function closePopup() {
+            document.getElementById('detailsPopup').style.display = 'none';
+        }
+    </script>
+</head>
+<body>
+    <div id="wrapper">
+        <header style="padding: 20px; text-align: center; background: #1d242a;">
+            <h1>Flavors Unleashed: A Taste Odyssey</h1>
+            <p>From Kitchen Creations to Culinary Delights</p>
+            <nav id="nav">
+                <a href="@Url.Action("Index", "Home")"><span>Menu</span></a>
+            </nav>
+        </header>
+        <main>
+            <div class="gallery">
+                <div class="gallery-item" onclick="showImage('@Url.Content("~/images/images_book/Item_Desc/lassi.png")')">
+                    <img src="@Url.Content("~/images/images_book/lasssi_img.jpg")" alt="Lassi">
+                    <h2>Lassi</h2>
+                    <a href="#" onclick="return false;">View More</a>
+                </div>
+                <div class="gallery-item" onclick="showImage('@Url.Content("~/images/images_book/Item_Desc/buttermilk.png")')">
+                    <img src="@Url.Content("~/images/images_book/buttermilk_img.jpg")" alt="Butter Milk">
+                    <h2>Butter Milk</h2>
+                    <a href="#" onclick="return false;">View More</a>
+                </div>
+                <div class="gallery-item" onclick="showImage('@Url.Content("~/images/images_book/Item_Desc/falooda.png")')">
+                    <img src="@Url.Content("~/images/images_book/falooda_img.jpg")" alt="Falooda">
+                    <h2>Falooda</h2>
+                    <a href="#" onclick="return false;">View More</a>
+                </div>
+            </div>
+        </main>
+        <div id="detailsPopup" onclick="closePopup()">
+            <span id="closeButton">Close</span>
+            <img id="popupImg" src="" alt="Popup Image">
+        </div>
+    </div>
+</body>
+</html>

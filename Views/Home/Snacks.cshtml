@@ -1,0 +1,135 @@
+﻿@{
+    Layout = null;
+}
+
+<!DOCTYPE HTML>
+<html>
+<head>
+    <title>Flavors Unleashed: A Taste Odyssey</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no, maximum-scale=5" />
+    <link rel="stylesheet" href="~/css/main.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #2e3842; /* dark gray background */
+            color: #f4f4f4; /* light gray text */
+            margin: 0;
+            padding: 0;
+        }
+
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            padding: 20px;
+            background-color: #333; /* slightly lighter gray background for gallery */
+        }
+
+        .gallery-item {
+            border: 1px solid #444; /* slightly darker border */
+            background: #2e3842; /* dark gray background for items */
+            box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+            text-align: center;
+            cursor: pointer;
+        }
+
+            .gallery-item img {
+                width: 100%;
+                height: auto;
+            }
+
+            .gallery-item h2 {
+                padding: 10px;
+                background: #333; /* header background in items */
+                margin: 0;
+                color: #fff; /* white text for headers */
+            }
+
+            .gallery-item a {
+                display: block;
+                padding: 10px;
+                background: #1d242a; /* very dark gray for buttons */
+                color: #fff;
+                text-decoration: none;
+            }
+
+                .gallery-item a:hover {
+                    background: #4E5D6C; /* lighter gray for hover */
+                }
+
+        #detailsPopup {
+            display: none; /* Hide the popup by default */
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.8);
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
+
+        #popupImg {
+            max-width: 80%;
+            max-height: 80%;
+        }
+    </style>
+    <script>
+        function showImage(src) {
+            var popup = document.getElementById('detailsPopup');
+            var popupImg = document.getElementById('popupImg');
+            popupImg.src = src;
+            popup.style.display = 'flex';
+        }
+
+        function closePopup() {
+            document.getElementById('detailsPopup').style.display = 'none';
+        }
+    </script>
+</head>
+<body>
+    <div id="wrapper">
+        <header style="padding: 20px; text-align: center; background: #1d242a;">
+            <h1>Flavors Unleashed: A Taste Odyssey</h1>
+            <p>From Kitchen Creations to Culinary Delights</p>
+            <nav id="nav">
+                <a href="@Url.Action("Category", "Home")"><span>Menu</span></a>
+            </nav>
+        </header>
+        <main>
+            <div class="gallery">
+                <div class="gallery-item" onclick="showImage('@Url.Content("~/images/images_book/Item_Desc/Samosa.png")')">
+                    <img src="@Url.Content("~/images/images_book/samosa.jpg")" alt="Samosa">
+                    <h2>Samosa</h2>
+                    <a href="#" onclick="return false;">View More</a>
+                </div>
+                <div class="gallery-item" onclick="showImage('@Url.Content("~/images/images_book/Item_Desc/cutlet.png")')">
+                    <img src="@Url.Content("~/images/images_book/cutlet_img.jpeg")" alt="Cutlet">
+                    <h2>Cutlet</h2>
+                    <a href="#" onclick="return false;">View More</a>
+                </div>
+                <div class="gallery-item" onclick="showImage('@Url.Content("~/images/images_book/Item_Desc/pani puri.png")')">
+                    <img src="@Url.Content("~/images/images_book/panipuri_img.jpg")" alt="Pani Puri">
+                    <h2>Pani Puri</h2>
+                    <a href="#" onclick="return false;">View More</a>
+                </div>
+                <div class="gallery-item" onclick="showImage('@Url.Content("~/images/images_book/Item_Desc/samosa chat.png")')">
+                    <img src="@Url.Content("~/images/images_book/chat_img.webp")" alt="Samosa Chat">
+                    <h2>Samosa Chat</h2>
+                    <a href="#" onclick="return false;">View More</a>
+                </div>
+                <div class="gallery-item" onclick="showImage('@Url.Content("~/images/images_book/Item_Desc/chai.png")')">
+                    <img src="@Url.Content("~/images/images_book/chai_img.jpg")" alt="Chai">
+                    <h2>Chai</h2>
+                    <a href="#" onclick="return false;">View More</a>
+                </div>
+            </div>
+        </main>
+        <div id="detailsPopup" onclick="closePopup()">
+            <img id="popupImg" src="" alt="Popup Image">
+        </div>
+    </div>
+</body>
+</html>

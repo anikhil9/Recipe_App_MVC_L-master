@@ -1,0 +1,127 @@
+﻿@{
+    Layout = null; // Indicates that this CSHTML file does not use a layout page
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nutrition and Healthy Eating</title>
+    <link rel="stylesheet" href="~/css/main.css">
+    <noscript><link rel="stylesheet" href="~/css/noscript.css" /></noscript>
+    <style>
+        body {
+            font-family: 'Source Sans Pro', sans-serif;
+            color: #fff;
+            background-color: #150C07;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        h1, h2, p {
+            margin-bottom: 15px;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            width: 250px;
+            height: 250px;
+        }
+
+        .section {
+            margin-top: 30px;
+            padding: 20px;
+            border-radius: 8px;
+            background-color: rgba(18, 21, 29, 0.85);
+            overflow: hidden;
+        }
+
+            .section .text {
+                text-align: justify;
+                color: rgba(255, 255, 255, 0.85);
+            }
+
+        /* Media query for screens larger than 768px */
+        media screen and (min-width: 768px) {
+            .section
+
+        {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .section .text {
+            flex: 1;
+        }
+
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <!-- Header -->
+        <header id="header" class="alt">
+            <h1><a href="@Url.Action("Index", "Home")">Flavors Unleashed</a></h1>
+            <nav id="nav">
+                <ul>
+                    <li class="special">
+                        <a href="@Url.Action("Health_Main", "Home")"><span>Menu</span></a>
+                    </li>
+                </ul>
+            </nav>
+        </header>
+    </div>
+    <div style="padding-top: 50px;" class="container">
+        <h1>Nutrition and Healthy Eating</h1>
+
+        <div class="section">
+            <div class="text">
+                <h2>Understanding Calories</h2>
+                <p>Dive into the basics of calories and understand their crucial role in daily nutrition. This segment explains what calories are and why they are essential for energy and overall health.</p>
+            </div>
+            <img src="~/images/caloriecount.webp" alt="Infographic of various foods with their calorie counts">
+        </div>
+
+        <div class="section">
+            <div class="text">
+                <h2>Importance of Measuring Food Portions</h2>
+                <p>Learn the significance of measuring food portions accurately to maintain a healthy diet. This section emphasizes the importance of portion control in managing calorie intake.</p>
+            </div>
+            <img src="~/images/portion.webp" alt="Different food portions on a kitchen scale">
+        </div>
+
+        <div class="section">
+            <div class="text">
+                <h2>Utilizing Calorie Tracking Apps</h2>
+                <p>Explore how modern technology can assist in managing your diet through calorie tracking apps. Discuss how these apps can help you log daily food intake and keep track of calories.</p>
+            </div>
+            <img src="~/images/calorietracker.webp" alt="Person using a calorie tracking app on their smartphone">
+        </div>
+
+        <div class="section">
+            <div class="text">
+                <h2>Understanding Energy Balance</h2>
+                <p>Unpack the concept of energy balance—calories in versus calories out. This segment explains how maintaining a balance is vital for weight management.</p>
+            </div>
+            <img src="~/images/balance.webp" alt="Diagram showing energy balance">
+        </div>
+
+        <div class="section">
+            <div class="text">
+                <h2>Making Healthier Food Choices</h2>
+                <p>Discover how to make healthier food choices based on calorie content. This final part contrasts high-calorie foods with low-calorie alternatives, helping readers understand how to choose better options for a healthier lifestyle.</p>
+            </div>
+            <img src="~/images/healthyfood.webp" alt="High-calorie vs low-calorie food options">
+        </div>
+
+    </div>
+</body>
+</html>

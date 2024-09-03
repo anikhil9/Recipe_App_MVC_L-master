@@ -1,0 +1,97 @@
+﻿@{
+    Layout = null; // Assuming you don't want to use a layout for this page
+}
+
+<!DOCTYPE HTML>
+<html>
+<head>
+    <title>Recipes App</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <link rel="stylesheet" href="~/css/main.css" />
+    <noscript><link rel="stylesheet" href="~/css/noscript.css" /></noscript>
+</head>
+<body class="is-preload">
+
+    <!-- Page Wrapper -->
+    <div id="page-wrapper">
+
+        <!-- Header -->
+        <header id="header">
+            <h1><a href="index.html">Flavors Unleashed</a></h1>
+            <nav id="nav">
+                <ul>
+                    <li class="special">
+                        <a href="#menu" class="menuToggle"><span>Menu</span></a>
+                        <div id="menu">
+                            <ul>
+                                <li><a href="@Url.Action("Store", "Home")">Home</a></li>
+                                <li><a href="@Url.Action("signUP", "Home")">Sign Up</a></li>
+                                <li><a href="@Url.Action("Login", "Home")">Log In</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                </ul>
+            </nav>
+        </header>
+
+        <!-- Main -->
+        <article id="main">
+            <header>
+                <h2>Why Recipe Books are IMPORTANT</h2>
+                <p></p>
+            </header>
+            <section class="wrapper style5">
+                <div class="inner">
+
+                    <p>Recipe books hold a significant place in culinary culture, serving multifaceted roles that extend far beyond simple collections of cooking instructions. At their core, these books are guardians of culinary heritage, safeguarding traditional recipes passed down through generations. They serve as invaluable educational resources, offering a wealth of knowledge on cooking techniques, ingredient combinations, and cultural culinary practices. Each recipe provides a blueprint for achieving culinary excellence, ensuring consistency and reproducibility in the kitchen. Yet, within these structured frameworks lie opportunities for boundless creativity and innovation, as cooks personalize recipes to reflect their unique tastes and preferences. In addition to guiding culinary exploration, recipe books often include nutritional information, empowering individuals to make informed dietary choices. Furthermore, these books facilitate cultural exchange by showcasing diverse cuisines from around the globe, fostering appreciation and understanding across borders. Beyond their practical utility, recipe books foster social connection, serving as catalysts for shared culinary experiences among families and communities. In essence, recipe books are not mere compilations of instructions but rather gateways to a world of culinary discovery, cultural appreciation, and communal joy.</p>
+
+                </div>
+            </section>
+        </article>
+
+        <!-- Main 2 -->
+        <article id="main">
+            <header>
+                <h2>Why it's even more IMPORTANT for Desi Cuisine</h2>
+                <p></p>
+            </header>
+            <section class="wrapper style5">
+                <div class="inner">
+
+                    <p>Delving deeper into the significance of recipe books, their importance amplifies within the context of Desi cuisine. Unlike some culinary traditions that may have standardized recipes, Desi food encompasses a vast array of regional variations, each with its own distinct flavor profiles, cooking techniques, and ingredient combinations. From the aromatic biryanis of Hyderabad to the fiery curries of Punjab, the diversity within Desi cuisine is unparalleled. In this intricate tapestry of flavors, recipe books serve as indispensable guides, offering clarity amidst the complexity. With detailed instructions and insights into traditional methods, these books demystify the nuances of Desi cooking, empowering enthusiasts to embark on a journey of culinary exploration. Moreover, Desi cuisine often involves intricate spice blends and elaborate cooking processes, presenting formidable challenges for novices. Recipe books not only break down these complexities into manageable steps but also provide essential tips and tricks to navigate the intricacies of Desi cooking with confidence.</p>
+                    <p>Furthermore, the importance of recipe books for Desi cuisine extends beyond mere practicality to encompass cultural preservation and celebration. Within each recipe lies a story of heritage and tradition, encapsulating the rich tapestry of Desi culinary history. By documenting age-old family recipes and regional specialties, recipe books become repositories of cultural knowledge, ensuring that centuries-old culinary traditions are cherished and passed down to future generations. In a rapidly changing world where cultural identities often face the risk of dilution, recipe books serve as guardians of Desi culinary heritage, anchoring communities to their roots and fostering a sense of pride in their culinary legacy. Moreover, as Desi cuisine continues to garner global recognition and appreciation, recipe books play a pivotal role in promoting cross-cultural understanding and appreciation, inviting individuals from diverse backgrounds to explore the vibrant flavors and textures of Desi cooking.</p>
+                    <p>In essence, recipe books for Desi cuisine are not merely instructional manuals but invaluable repositories of cultural heritage, culinary wisdom, and communal identity. They bridge the gap between past and present, tradition and innovation, offering a glimpse into the rich tapestry of Desi culinary traditions while inspiring a new generation of cooks to embark on their own flavorful adventures.</p>
+
+                </div>
+            </section>
+        </article>
+
+        <!-- Footer -->
+        <footer id="footer">
+            <ul class="icons">
+                <li><a href="#" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
+                <li><a href="#" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
+                <li><a href="#" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
+                <li><a href="#" class="icon brands fa-dribbble"><span class="label">Dribbble</span></a></li>
+                <li><a href="#" class="icon solid fa-envelope"><span class="label">Email</span></a></li>
+            </ul>
+            <ul class="copyright">
+                <li>&copy; Untitled</li>
+                <li>Design: <a href="@Url.Action("AboutUS", "Home")">Kanya Raasi</a></li>
+            </ul>
+        </footer>
+
+    </div>
+
+    <!-- Scripts -->
+    <script src="~/assets/js/jquery.min.js"></script>
+    <script src="~/assets/js/jquery.scrollex.min.js"></script>
+    <script src="~/assets/js/jquery.scrolly.min.js"></script>
+    <script src="~/assets/js/browser.min.js"></script>
+    <script src="~/assets/js/breakpoints.min.js"></script>
+    <script src="~/assets/js/util.js"></script>
+    <script src="~/assets/js/main.js"></script>
+
+</body>
+</html>

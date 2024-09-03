@@ -1,0 +1,124 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fitness: A Comprehensive Guide to Fitness and Exercise</title>
+    <link rel="stylesheet" href="~/css/main.css">
+    <style>
+        body {
+            font-family: 'Source Sans Pro', sans-serif;
+            color: #fff;
+            background-color: #150C07;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        h1, h2, p {
+            margin-bottom: 15px;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            width: 250px;
+            height: 250px;
+        }
+
+        .section {
+            margin-top: 30px;
+            padding: 20px;
+            border-radius: 8px;
+            background-color: rgba(18, 21, 29, 0.85);
+            overflow: hidden;
+        }
+
+        .section .text {
+            text-align: justify;
+            color: rgba(255, 255, 255, 0.85);
+        }
+
+        media (min-width: 768px) {
+            .section {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+            }
+            .section .text {
+                flex: 1;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <!-- Header -->
+        <header id="header" class="alt">
+            <h1><a href="@Url.Action("Index", "Home")">Flavors Unleashed</a></h1>
+            <nav id="nav">
+                <ul>
+                    <li class="special">
+                        <a href="@Url.Action("Health_Main", "Home")"><span>Menu</span></a>
+                    </li>
+                </ul>
+            </nav>
+        </header>
+    </div>
+    <div class="container">
+        <h1>Fitness: A Comprehensive Guide to Fitness and Exercise</h1>
+
+        <div class="section">
+            <div class="text">
+                <h2>The Importance of Regular Physical Activity</h2>
+                <p>Regular physical activity is crucial for maintaining good health. Engaging in regular exercise helps to control weight, combat health conditions and diseases, improve mood, boost energy, and promote better sleep. Whether it’s a daily walk, yoga, or more intense activities like weight lifting, the benefits are substantial and well-documented.</p>
+            </div>
+            <img src="~/images/pic1.webp" alt="People of various ages engaging in different physical activities">
+        </div>
+
+        <div class="section">
+            <div class="text">
+                <h2>Cardiovascular Exercises for Heart Health</h2>
+                <p>Cardiovascular exercise, also known as cardio or aerobic exercise, is essential for maintaining a healthy heart and lungs. Activities like running, swimming, and cycling increase the heart rate, improve blood circulation, and can reduce the risk of heart disease, stroke, and diabetes. Incorporating at least 150 minutes of moderate-intensity aerobic activity a week can offer significant health benefits.</p>
+            </div>
+            <img src="~/images/pic2.webp" alt="A person running outdoors, a cyclist, and someone using a rowing machine">
+        </div>
+
+        <div class="section">
+            <div class="text">
+                <h2>Strength Training: Building Muscle and Bone Density</h2>
+                <p>Strength training is not just about building muscle mass; it’s about enhancing muscle strength, improving posture, boosting metabolism, and supporting joint health. Utilizing resistance exercises such as weight lifting or bodyweight movements helps in increasing bone density, which is crucial for aging bodies.</p>
+            </div>
+            <img src="~/images/pic3.webp" alt="A person lifting weights in a gym, and another doing bodyweight exercises at home">
+        </div>
+
+        <div class="section">
+            <div class="text">
+                <h2>Flexibility and Stretching: Key to a Balanced Workout Routine</h2>
+                <p>Flexibility exercises like yoga and Pilates enhance the range of motion, reduce the risk of injury, and relieve muscle tension. Regular stretching can improve flexibility, posture, and mental well-being. Incorporating flexibility workouts into your routine can also aid muscle recovery and promote circulation.</p>
+            </div>
+            <img src="~/images/pic4.webp" alt="A yoga class in session, and an individual practicing Pilates">
+        </div>
+
+        <div class="section">
+            <div class="text">
+                <h2>High-Intensity Interval Training (HIIT): Efficiency in Exercise</h2>
+                <p>High-Intensity Interval Training, or HIIT, involves short bursts of intense exercise alternated with low-intensity recovery periods. HIIT can burn a lot of calories in a short amount of time and is highly effective in boosting cardiovascular health, increasing metabolism, and reducing body fat levels. It’s an excellent option for those with a busy schedule.</p>
+            </div>
+            <img src="~/images/pic5.webp" alt="A group fitness HIIT session outdoors">
+        </div>
+
+        <div class="section">
+            <div class="text">
+                <h2>Conclusion</h2>
+                <p>Whether you are new to exercise or looking to step up your fitness routine, understanding these key areas can help you create a balanced and effective workout plan. Remember, the best kind of fitness routine is one that you can consistently follow, so choose activities that you enjoy and fit your lifestyle.</p>
+            </div>
+        </div>
+
+    </div>
+</body>
+</html>

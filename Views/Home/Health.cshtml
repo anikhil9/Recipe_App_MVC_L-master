@@ -1,0 +1,119 @@
+﻿@{
+    Layout = null; // Assuming you don't want to use a layout for this page
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Healthy Living Guide</title>
+    <link rel="stylesheet" href="~/css/main.css">
+    <noscript><link rel="stylesheet" href="~/css/noscript.css" /></noscript>
+    <style>
+        .image-description {
+            font-style: italic;
+            text-align: center;
+            margin-top: 5px;
+            color: #666;
+        }
+
+        .content {
+            display: flex;
+            align-items: center;
+            margin-top: 20px;
+        }
+
+            .content .text, .content .image {
+                flex: 1;
+            }
+
+            .content .image {
+                text-align: center;
+            }
+
+            .content img {
+                max-width: 100%;
+                height: auto;
+            }
+    </style>
+</head>
+<body>
+    <div>
+        <!-- Header -->
+        <header id="header" class="alt">
+            <h1><a href="@Url.Action("Index", "Home")">Flavors Unleashed</a></h1>
+            <nav id="nav">
+                <ul>
+                    <li class="special">
+                        <a href="@Url.Action("Health_Main", "Home")"><span>Menu</span></a>
+                    </li>
+                </ul>
+            </nav>
+        </header>
+    </div>
+    <div style="padding-top: 50px;" class="wrapper style-5">
+        <div class="inner">
+            <h1>Introduction to Healthy Eating</h1>
+            <h2>What is Healthy Eating?</h2>
+            <div class="content">
+                <div class="text">
+                    <p>Explore the basics of a balanced diet, emphasizing the importance of various food groups including fruits, vegetables, whole grains, and lean proteins. Discuss how combining these elements can lead to improved overall health.</p>
+                </div>
+                <div class="image">
+                    <img src="~/images/Healthy.webp" alt="Balanced diet including fruits, vegetables, whole grains, and lean proteins">
+                    <p class="image-description">A balanced diet plate</p>
+                </div>
+            </div>
+
+            <h1>The Importance of Hydration</h1>
+            <h2>Staying Hydrated: More Than Just Water</h2>
+            <div class="content">
+                <div class="text">
+                    <p>Delve into the significance of hydration for maintaining vital body functions, showcasing different hydrating drinks like water, herbal teas, and coconut water.</p>
+                </div>
+                <div class="image">
+                    <img src="~/images/Water_Tea.webp" alt="Different hydrating drinks like water, herbal teas, and coconut water">
+                    <p class="image-description">Variety of hydrating drinks</p>
+                </div>
+            </div>
+
+            <h1>Superfoods and Their Benefits</h1>
+            <h2>Superfoods to Add to Your Diet</h2>
+            <div class="content">
+                <div class="text">
+                    <p>Highlight the nutritional powerhouses known as superfoods, including berries, dark leafy greens, and nuts. Provide tips on how to incorporate these into daily meals for maximum health benefits.</p>
+                </div>
+                <div class="image">
+                    <img src="~/images/Nuts_Greens.webp" alt="Berries, dark leafy greens, and nuts">
+                    <p class="image-description">Collection of superfoods</p>
+                </div>
+            </div>
+
+            <h1>Understanding Dietary Restrictions</h1>
+            <h2>Navigating Food Allergies and Intolerances</h2>
+            <div class="content">
+                <div class="text">
+                    <p>Address the challenges of dietary restrictions such as allergies and intolerances, offering insights into how to adjust diets safely and enjoyably while avoiding allergens like gluten, nuts, dairy, and shellfish.</p>
+                </div>
+                <div class="image">
+                    <img src="~/images/Nuts_Gluten.webp" alt="Gluten, nuts, dairy, and shellfish-free options">
+                    <p class="image-description">Dietary restriction safe foods</p>
+                </div>
+            </div>
+
+            <h1>The Role of Probiotics in Gut Health</h1>
+            <h2>Probiotics: Your Gut's Best Friend</h2>
+            <div class="content">
+                <div class="text">
+                    <p>Discuss the importance of gut health and how probiotics play a crucial role in maintaining it. Suggest probiotic-rich foods such as yogurt, kefir, sauerkraut, and kombucha, explaining their benefits.</p>
+                </div>
+                <div class="image">
+                    <img src="~/images/Probiotic.webp" alt="Probiotic-rich foods like yogurt, kefir, sauerkraut, and kombucha">
+                    <p class="image-description">Probiotic-rich foods</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

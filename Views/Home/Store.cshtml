@@ -1,0 +1,44 @@
+﻿@{
+    Layout = null; // This indicates that the page doesn't use a layout page
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Store Locations</title>
+    <link rel="stylesheet" href="~/css/main.css">
+    <link rel="stylesheet" href="~/css/store.css">
+</head>
+<body>
+    <header id="header" class="alt">
+        <h1><a href="@Url.Action("Index", "Home")">Flavors Unleashed</a></h1>
+        <nav id="nav">
+            <ul>
+                <li class="special">
+                    <a style="color: black;" href="@Url.Action("Index", "Home")"><span>Menu</span></a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <div id="page-wrapper">
+        <div class="search-container">
+            <input type="text" id="searchBar" placeholder="Search store by name...">
+        </div>
+        <table id="storeTable">
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Address</th>
+                    <th>State</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Data will be injected by JavaScript -->
+            </tbody>
+        </table>
+    </div>
+    <script src="~/js/Store.js"></script>
+</body>
+</html>

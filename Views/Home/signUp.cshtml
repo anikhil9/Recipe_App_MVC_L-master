@@ -1,0 +1,96 @@
+﻿@{
+    Layout = null; // Assuming you don't want to use a layout for this page
+}
+
+<!DOCTYPE HTML>
+<html>
+<head>
+    <title>Sign Up - Flavors Unleashed</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="~/css/main.css" />
+</head>
+<body class="landing is-preload">
+    <div id="page-wrapper">
+        <!-- Header -->
+        <header id="header">
+            <h1><a href="@Url.Action("Index", "Home")">Flavors Unleashed</a></h1>
+            <nav>
+                <ul>
+                    <li><a href="@Url.Action("Index", "Home")">Home</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <!-- Main -->
+        <section id="main" class="wrapper">
+            <div class="inner">
+                <header class="major special">
+                    <h2>Sign Up</h2>
+                    <p>Enter your details to create an account.</p>
+                </header>
+                <form id="signupForm" onsubmit="handleSubmit(event)">
+                    <div class="row gtr-uniform">
+                        <div class="col-6 col-12-xsmall">
+                            <input type="text" name="fullname" id="fullname" placeholder="Full Name" required />
+                        </div>
+                        <div class="col-6 col-12-xsmall">
+                            <input type="text" name="username" id="username" placeholder="Username" required minlength="4" />
+                        </div>
+                        <div class="col-6 col-12-xsmall">
+                            <input type="email" name="email" id="email" placeholder="Email" required />
+                        </div>
+                        <div class="col-6 col-12-xsmall">
+                            <input type="password" name="password" id="password" placeholder="Password" required minlength="6" />
+                        </div>
+                        <div class="col-6 col-12-xsmall">
+                            <input type="password" name="confirm_password" id="confirm_password" placeholder="Confirm Password" required oninput="checkPasswordMatch();" />
+                        </div>
+                        <div class="col-12">
+                            <input type="checkbox" id="agree" name="agree">
+                            <label for="agree">I agree to the Terms and Conditions</label>
+                        </div>
+                        <div class="col-12">
+                            <ul class="actions special">
+                                <li><input type="submit" value="Sign Up" class="primary" disabled id="submitBtn" /></li>
+                            </ul>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer id="footer">
+            <!-- Your footer content -->
+        </footer>
+    </div>
+
+    <!-- Scripts -->
+    <script>
+        function handleSubmit(event) {
+            event.preventDefault(); // Prevents the form from submitting in the usual way
+            if (document.getElementById('agree').checked) {
+                alert('Details entered correctly!');
+                document.getElementById('signupForm').reset(); // Resets the form fields after displaying the alert
+                document.getElementById('submitBtn').disabled = true; // Keep submit disabled after reset
+            } else {
+                alert('You must agree to the terms and conditions.');
+            }
+        }
+
+        function checkPasswordMatch() {
+            const password = document.getElementById('password').value;
+            const confirmPassword = document.getElementById('confirm_password').value;
+            const submitBtn = document.getElementById('submitBtn');
+            submitBtn.disabled = true; // Initially disable the submit button
+
+            if (password === confirmPassword && password.length >= 6) {
+                submitBtn.disabled = false; // Enable submit button only if passwords match and are of sufficient length
+            } else {
+                submitBtn.disabled = true;
+            }
+        }
+    </script>
+</body>
+</html>

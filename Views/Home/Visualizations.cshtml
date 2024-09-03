@@ -1,0 +1,173 @@
+﻿@{
+    Layout = null; // This indicates that the page doesn't use a layout page
+}
+
+<!DOCTYPE HTML>
+<html>
+<head>
+    <title>Sales Visualization</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <link rel="stylesheet" href="~/css/main.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.7.0/chart.min.css">
+</head>
+<body>
+    <!-- Page Wrapper -->
+    <div id="page-wrapper">
+        <!-- Header -->
+        <header id="header" class="alt">
+            <h1><a href="@Url.Action("Index", "Home")">Flavors Unleashed</a></h1>
+            <nav id="nav">
+                <ul>
+                    <li class="special">
+                        <a href="#menu" class="menuToggle"><span>Menu</span></a>
+                        <div id="menu">
+                            <ul>
+                                <li><a href="@Url.Action("Index", "Home")">Home</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                </ul>
+            </nav>
+        </header>
+
+        <!-- Main -->
+        <section id="main" class="wrapper style5">
+            <div class="inner">
+                <header class="major">
+                    <h2>Stat Visualization</h2>
+                </header>
+                <!-- Pie Chart -->
+                <div class="inner">
+                    <h3 style="text-align: center;">Category wise menu Distribution</h3>
+                    <div class="chart-container" style="position: relative; height:400px; width:80vw; margin: 0 auto;">
+                        <canvas id="pieChart"></canvas>
+                    </div>
+                    <br>
+                    <p style="text-align: center;">
+                        Pie chart depicting the percentage of each chategory.
+                    </p>
+                </div>
+                <!-- Bar Chart -->
+                <div class="inner" style="margin-top: 50px; margin-right: 40px;">
+                    <h3 style="text-align: center;">Difficulty Level</h3>
+                    <div class="chart-container" style="position: relative; height:400px; width:80vw; margin: 0 auto;">
+                        <canvas id="barChart"></canvas>
+                    </div>
+                    <br>
+                    <p style="text-align: center;">
+                        Bar chart depicting the difficulty level of making each item on a scale of 10.
+                    </p>
+                </div>
+                <!-- Favorite Items -->
+                <div class="inner" style="margin-top: 50px; margin-right: 40px;">
+                    <h3 style="text-align: center;">Favorite Items</h3>
+                    <div class="favorite-items">
+                        <ul>
+                            <li><strong>Chicken Biryani:</strong> ★★★★★</li>
+                            <li><strong>Butter Chicken:</strong> ★★★★☆</li>
+                            <li><strong>Paneer Tikka Masala:</strong> ★★★☆☆</li>
+                            <li><strong>Paneer Biryani:</strong> ★★★☆☆</li>
+                            <li><strong>Dosa:</strong> ★★★☆☆</li>
+                            <li><strong>Vegetable Biryani:</strong> ★★★☆☆</li>
+                            <li><strong>Paratha:</strong> ★★★☆☆</li>
+                            <li><strong>Idly:</strong> ★★★☆☆</li>
+                            <li><strong>Samosa:</strong> ★★★☆☆</li>
+                            <li><strong>Cutlet:</strong> ★★★☆☆</li>
+                            <li><strong>Falooda:</strong> ★★★☆☆</li>
+                            <li><strong>Raita:</strong> ★★★☆☆</li>
+                            <li><strong>Butter Milk:</strong> ★★★☆☆</li>
+                        </ul>
+                    </div>
+                    <br>
+                    <p style="text-align: center;">
+                        Stars represent the popularity of each item, with more stars indicating higher favorability.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- Footer -->
+        <footer id="footer">
+            <ul class="icons">
+                <li><a href="#" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
+                <li><a href="#" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
+                <li><a href="#" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
+                <li><a href="#" class="icon solid fa-envelope"><span class="label">Email</span></a></li>
+            </ul>
+            <ul class="copyright">
+                <li>&copy; Untitled</li>
+                <li>Design: <a href="">Kanya Raasi</a></li>
+            </ul>
+        </footer>
+    </div>
+
+    <!-- Scripts -->
+    <script src="~/js/jquery.min.js"></script>
+    <script src="~/js/jquery.scrollex.min.js"></script>
+    <script src="~/js/jquery.scrolly.min.js"></script>
+    <script src="~/js/browser.min.js"></script>
+    <script src="~/js/breakpoints.min.js"></script>
+    <script src="~/js/util.js"></script>
+    <script src="~/js/main.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.7.0/chart.min.js"></script>
+    <script>
+        // Pie chart data
+        var pieData = {
+            labels: ['BreakFast', 'Lunch', 'Snacks', 'Beverages'],
+            datasets: [{
+                data: [5,8,5,3],
+                backgroundColor: ['#FF6384', '#36A2EB', '#FFCE56', '#00cc66']
+            }]
+        };
+
+        // Bar chart data
+        var barData = {
+            labels: ['Butter Chicken', 'Chicken Biryani', 'Vegetable Biryani', 'Paneer Tikka Masala', 'Paneer Biryani', 'Samosa', 'Cutlet', 'Falooda', 'Butter Milk', 'Dosa', 'Idly', 'Paratha', 'Raita'],
+            datasets: [{
+                label: 'Difficulty',
+                data: [8, 9, 6, 5, 7, 4, 4, 3, 2, 6, 5, 7, 3],
+                backgroundColor: '#36A2EB'
+            }]
+        };
+
+        // Pie chart options
+        var pieOptions = {
+            responsive: true,
+            maintainAspectRatio: false
+        };
+
+        // Bar chart options
+        var barOptions = {
+            responsive: true,
+            maintainAspectRatio: false,
+            scales: {
+                y: {
+                    beginAtZero: true
+                }
+            }
+        };
+
+        // Get pie chart canvas
+        var pieChartCanvas = document.getElementById('pieChart').getContext('2d');
+
+        // Get bar chart canvas
+        var barChartCanvas = document.getElementById('barChart').getContext('2d');
+
+        // Create pie chart
+        var pieChart = new Chart(pieChartCanvas, {
+            type: 'pie',
+            data: pieData,
+            options: pieOptions
+        });
+
+        // Create bar chart
+        var barChart = new Chart(barChartCanvas, {
+            type: 'bar',
+            data: barData,
+            options: barOptions
+        });
+    </script>
+</body>
+</html>

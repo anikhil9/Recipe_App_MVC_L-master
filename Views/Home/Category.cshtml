@@ -1,0 +1,70 @@
+﻿@{
+    Layout = null; // Optional: If you want to use a layout, specify it here
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Recipes Categories - Flavors Unleashed</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <link rel="stylesheet" href="~/css/main.css" />
+</head>
+<body class="landing is-preload">
+
+    <div id="page-wrapper">
+        <!-- Header -->
+        <header id="header" class="alt">
+            <h1><a href="@Url.Action("Index", "Home")">Flavors Unleashed</a></h1>
+            <nav id="nav">
+                <ul>
+                    <li class="special">
+                        <a href="#menu" class="menuToggle"><span>Menu</span></a>
+                        <div id="menu">
+                            <ul>
+                                <li><a href="@Url.Action("Index", "Home")">Home</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                </ul>
+            </nav>
+        </header>
+
+        <!-- Main Content -->
+        <section id="banner">
+            <div class="inner">
+                <h2>Select a Recipe Category</h2>
+                <ul class="actions special">
+                    <li><a href="@Url.Action("BreakFast", "Home")" class="button primary">Breakfast</a></li>
+                    <li><a href="@Url.Action("Lunch", "Home")" class="button primary">Lunch</a></li>
+                    <li><a href="@Url.Action("Snacks", "Home")" class="button primary">Snacks</a></li>
+                    <li><a href="@Url.Action("Beverages", "Home")" class="button primary">Beverages</a></li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer id="footer">
+            <ul class="icons">
+                <li><a href="#" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
+                <li><a href="#" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
+                <li><a href="#" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
+                <li><a href="#" class="icon solid fa-envelope"><span class="label">Email</span></a></li>
+            </ul>
+            <ul class="copyright">
+                <li>&copy; Untitled</li>
+                <li>Design: <a href="@Url.Action("AboutUS", "Home")">Kanya Raasi</a></li>
+            </ul>
+        </footer>
+    </div>
+
+    <!-- Scripts -->
+    <script src="~/js/jquery.min.js"></script>
+    <script src="~/js/jquery.scrollex.min.js"></script>
+    <script src="~/js/jquery.scrolly.min.js"></script>
+    <script src="~/js/browser.min.js"></script>
+    <script src="~/js/breakpoints.min.js"></script>
+    <script src="~/js/util.js"></script>
+    <script src="~/js/main.js"></script>
+</body>
+</html>
